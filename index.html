@@ -1,74 +1,366 @@
-<!DOCTYPE html>
-<html>
-   <meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+
 <head>
-<title>CCU公共事務研習社</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-ul {margin:0; padding:0; float:left;}
-ul li {margin-left:5px; text-align:center; float:left;}
-ul li p {margin:5px 0;}
-/* width */
-::-webkit-scrollbar {
-  width: 20px;
-}
+    <title>Parallax vertical</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shadow.css">
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-div.scrollmenu {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-}
-div.photoscroll{
-  overflow: auto;
-  white-space: nowrap;
-}
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            overflow: hidden;
+            overflow-y: scroll;
 
-div.scrollmenu a {
-  display:inline-block ;
-  color:white ;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-div.scrollmenu a:hover {
-  background-color: #777;
-}
-</style>
-</head>   
-<h2>
-<a href="https://ibb.co/y5Z8PF6"><img src="https://i.ibb.co/2PCjh3v/logo.png" alt="logo" border="0"height="50"width="50" align="left"></a> 
-<font face="Microsoft JhengHei" >CCU公共事務研習社</font>
-</h2>
-<div class="scrollmenu">
-<a href="#home"><font size="5">Home</font></a>
-  <a href="#about"><font size="5">About</font></a>
-  <a href="#people"><font size="5">Event</font></a>
-  <a href="#work"><font size="5">contact us</font></a>
-</div>
-<p><font face="Microsoft JhengHei"size="6" >三大主軸｜公共事務x社會創新x議題思辨</font></p>
+        .blackboard {
+            overflow: hidden;
+            display: inline-block;
+            margin: 0 auto;
 
-<div class="photoscroll">
-	<ul>
-	<li><img src="https://i.ibb.co/ZBvXN7v/107-12.jpg" alt="107-12" border="0"height="500"><img src="https://i.ibb.co/80wpWCF/2018.jpg" alt="2018" border="0"height="500"><img src="https://i.ibb.co/7j1y4v2/photo3.jpg" alt="photo3" border="0"height="500"><img src="https://i.ibb.co/Yb3c8nn/109-12.jpg" alt="109-12" border="0"height="500">
-	
-	</ul>
-	
-</div>
 
+            width: 640px;
+            /* height: 480px; */
+            background-color: #6f85ff;
+        }
+
+        .blackboard * {}
+
+        .blackboard>div {
+            max-width: 100% !important;
+            margin-top: 100vh;
+            /* position: sticky!important; */
+            /* top: 500px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blackboard">
+
+        <div class="innershadow1" style="
+            position: relative;
+            background-color: #6f85ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        ">
+            <img src="assets/mario/m-bg-menu.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1" data-left1="0"
+                data-left2="145" style="position:absolute;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   20%;">
+        </div>
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1" data-left1="0"
+                data-left2="20" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   20%;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" data-left1="90"
+                data-left2="30" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   20%;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" data-left1="90"
+                data-left2="30" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    right:   0;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" data-left1="80" data-left2="0"
+                style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   50%;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" data-left1="0"
+                data-left2="-50" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1" data-left1="0"
+                data-left2="20" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   20%;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1" data-left1="120"
+                data-left2="80" style="position:absolute;
+                    z-index: 1;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   300px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/jump.png" class="scrollable dropshadow1" data-left1="30" data-left2="40"
+                data-bottom1="10" data-bottom2="25" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   20%;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1" data-left1="80"
+                data-left2="60" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   300px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1" data-left1="50"
+                data-left2="80" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1" data-left1="30"
+                data-left2="50" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1" data-left1="45"
+                data-left2="60" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 203px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro-s.png" class="scrollable dropshadow1" data-left1="95"
+                data-left2="80" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1" data-left1="60"
+                data-left2="80" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1" data-left1="65"
+                data-left2="78" data-bottom1="45" data-bottom2="10" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 203px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+        <div class="innershadow1" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/diemario.png" class="scrollable dropshadow1" data-bottom1="40"
+                data-bottom2="-80" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 150px; 
+                    left:   460px;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1" data-left1="70"
+                data-left2="90" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1" data-left1="80"
+                data-left2="100" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+
+
+        <div class="container-fluid" style="background-color:black;min-height: 200vh"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                var winh = $(window).height();
+                $(".scrollable").each(function () {
+                    var parent_pos = $(this).parent().offset().top;
+                    var next_pos = $(this).parent().next().offset().top;
+                    var parent_height = $(this).parent().height();
+                    var parent_scrolled = scrolled - parent_pos + winh * 0.25;
+
+                    if ($(this).parent().hasClass("horizontal")) {
+                        if ($(this).attr("data-left1")) {
+                            $(this).css('transform', "translateX(" + (($(this).data('left2') -
+                                    $(this).data('left1')) * parent_scrolled /
+                                parent_height + $(this).data('left1')) + 'vw)');
+                        }
+
+                    } else {
+                        if (scrolled > parent_pos - winh * 0.25 && scrolled < next_pos - winh *
+                            0.25) {
+
+                            if ($(this).attr("data-left1")) {
+                                $(this).css('left', (($(this).data('left2') - $(this).data(
+                                    'left1')) * parent_scrolled / parent_height + $(
+                                    this).data('left1')) + '%    ');
+                            }
+                            if ($(this).attr("data-top1")) {
+                                $(this).css('top', (($(this).data('top2') - $(this).data(
+                                    'top1')) * parent_scrolled / parent_height + $(
+                                    this).data('top1')) + '%');
+                            }
+                            if ($(this).attr("data-width1")) {
+                                $(this).css('width', (($(this).data('width2') - $(this).data(
+                                        'width1')) * parent_scrolled / parent_height +
+                                    $(this).data('width1')) + '%');
+                            }
+                            if ($(this).attr("data-height1")) {
+                                $(this).css('height', (($(this).data('height2') - $(this).data(
+                                        'height1')) * parent_scrolled / parent_height +
+                                    $(this).data('height1')) + '%');
+                            }
+                            if ($(this).attr("data-bottom1")) {
+                                $(this).css('bottom', (($(this).data('bottom2') - $(this).data(
+                                        'bottom1')) * parent_scrolled / parent_height +
+                                    $(this).data('bottom1')) + '%');
+                            }
+                        }
+
+                    }
+
+                });
+                //                console.log($("#testing").offset().left/$(window).width());
+            });
+        });
+    </script>
 </body>
+
 </html>
