@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Parallax vertical</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shadow.css">
+
+
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            overflow: hidden;
+            overflow-y: scroll;
+
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .blackboard {
+            overflow: hidden;
+            display: inline-block;
+            margin: 0 auto;
+
+
+            width: 640px;
+            /* height: 480px; */
+            background-color: #6f85ff;
+        }
+
+        .blackboard * {}
+
+        .blackboard>div {
+            max-width: 100% !important;
+            margin-top: 100vh;
+            /* position: sticky!important; */
+            /* top: 500px; */
+        }
+        .blackboard > .scene1 {
+            margin-top: 30vh;
+        }
+
+        .cross {
+            position: relative;
+        }
+
+        .the-end {
+            font-family: monospace;
+            font-size: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 50vh;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blackboard">
+        <div class="innershadow1 scene1" style="
+            position: relative;
+            background-color: #6f85ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        ">
+            <img src="assets/mario/m-bg-menu.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1"
+                data-left1="-30"
+                data-left2="50" style="position:absolute;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1 scene2" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1"
+                data-left1="0"
+                data-left2="10" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1"
+                data-left1="80"
+                data-left2="50" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   500px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1"
+                data-left1="80"
+                data-left2="50" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   500px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1"
+                data-left1="15"
+                data-left2="10" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   60px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1"
+                data-left1="0"
+                data-left2="-50" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1 scene3" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1"
+                data-left1="0"
+                data-left2="10" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   0;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1"
+                data-left1="120"
+                data-left2="100" style="position:absolute;
+                    z-index: 1;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   300px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1 scene4" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/jump.png" class="scrollable dropshadow1"
+                data-left1="30"
+                data-left2="40"
+                data-bottom1="15"
+                    data-bottom2="25" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 60px; 
+                    left:   180px;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1"
+                data-left1="80"
+                data-left2="60" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   520px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+        <div class="innershadow1 scene5" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro.png" class="scrollable dropshadow1"
+                data-left1="50"
+                data-left2="70" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   330px;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1"
+                data-left1="30"
+                data-left2="50" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   200px;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1"
+                data-left1="45"
+                data-left2="60" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 203px; 
+                    left:   290px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+        <div class="innershadow1 scene6" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/mario-bro-s.png" class="scrollable dropshadow1"
+                data-left1="95"
+                data-left2="85" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 50px; 
+                    left:   600px;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1"
+                data-left1="60"
+                data-left2="70" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   360px;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1"
+                data-left1="65"
+                data-left2="78"
+                    data-bottom1="45"
+                    data-bottom2="28" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 203px; 
+                    left:   330px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+        <div class="innershadow1 scene7" style="position:relative;">
+            <img src="assets/mario/m-bg-blank.jpg" style="width: 640px;">
+            <img id="testing" src="assets/mario/diemario.png" class="scrollable dropshadow1" 
+                data-bottom1="40"
+                data-bottom2="-80" style="position:absolute;
+                    z-index: 2;
+                    width:  35px; 
+                    bottom: 150px; 
+                    left:   460px;">
+            <img id="testing" src="assets/mario/monster.png" class="scrollable dropshadow1"
+                data-left1="70"
+                data-left2="90" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   450px;">
+            <img id="testing" src="assets/mario/musroom.png" class="scrollable dropshadow1"
+                data-left1="85"
+                data-left2="100" style="position:absolute;
+                    z-index: 2;
+                    width:  35px;
+                    bottom: 50px; 
+                    left:   530px;">
+            <img id="testing" src="assets/mario/grass.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  450px; 
+                    bottom: 50px; 
+                    left:   -80px;">
+            <img id="testing" src="assets/mario/square.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    width:  350px; 
+                    bottom: 170px; 
+                    left:   90px;">
+            <img id="testing" src="assets/mario/cloud.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 0;
+                    width:  550px; 
+                    bottom: 270px; 
+                    left:   10px;">
+            <img id="testing" src="assets/mario/bricks.png" class="scrollable dropshadow1" style="position:absolute;
+                    z-index: 1;
+                    height: 50px;
+                    bottom: 1px; 
+                    left:   0;">
+        </div>
+
+        <div class="container-fluid cross" style="background-color:black;min-height: 200vh">
+            <p class="the-end">GAME OVER</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var winh = $(window).height();
+                var scrolled = $(window).scrollTop() + winh * 0.2;
+                $(".scrollable").each(function () {
+                    var parent_pos = $(this).parent().offset().top;
+                    var next_pos = $(this).parent().next().offset().top;
+                    var parent_height = $(this).parent().height();
+                    var parent_scrolled = scrolled - parent_pos + winh * 0.25;
+
+                    if ($(this).parent().hasClass("horizontal")) {
+                        if ($(this).attr("data-left1")) {
+                            $(this).css('transform', "translateX(" + (($(this).data('left2') -
+                                    $(this).data('left1')) * parent_scrolled /
+                                parent_height + $(this).data('left1')) + 'vw)');
+                        }
+
+                    } else {
+                        if (scrolled > parent_pos - winh * 0.25 && scrolled < next_pos - winh *
+                            0.25) {
+
+                            if ($(this).attr("data-left1")) {
+                                $(this).css('left', (($(this).data('left2') - $(this).data(
+                                    'left1')) * parent_scrolled / parent_height + $(
+                                    this).data('left1')) + '%    ');
+                            }
+                            if ($(this).attr("data-top1")) {
+                                $(this).css('top', (($(this).data('top2') - $(this).data(
+                                    'top1')) * parent_scrolled / parent_height + $(
+                                    this).data('top1')) + '%');
+                            }
+                            if ($(this).attr("data-width1")) {
+                                $(this).css('width', (($(this).data('width2') - $(this).data(
+                                        'width1')) * parent_scrolled / parent_height +
+                                    $(this).data('width1')) + '%');
+                            }
+                            if ($(this).attr("data-height1")) {
+                                $(this).css('height', (($(this).data('height2') - $(this).data(
+                                        'height1')) * parent_scrolled / parent_height +
+                                    $(this).data('height1')) + '%');
+                            }
+                            if ($(this).attr("data-bottom1")) {
+                                $(this).css('bottom', (($(this).data('bottom2') - $(this).data(
+                                        'bottom1')) * parent_scrolled / parent_height +
+                                    $(this).data('bottom1')) + '%');
+                            }
+                        }
+
+                    }
+
+                });
+                //                console.log($("#testing").offset().left/$(window).width());
+            });
+        });
+    </script>
+</body>
+
+</html>
